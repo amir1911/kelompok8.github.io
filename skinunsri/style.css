@@ -1,0 +1,660 @@
+/* Global Styles */
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: #fbfbff;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 7%;
+    background: #fd35d2;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Logo */
+.navbar .navbar-logo {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Navbar Links */
+.navbar-nav {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.navbar-nav a {
+    color: #fff;
+    font-size: 1.4rem;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+.navbar-nav a:hover {
+    color: #ff970f;
+}
+
+/* Navbar Extra (Icons) */
+.navbar-extra {
+    display: flex;
+    gap: 1rem;
+}
+
+.navbar-extra a {
+    color: #fff;
+    font-size: 1.8rem;
+    text-decoration: none;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Hover Effect for Icons */
+.navbar-extra a:hover {
+    transform: scale(1.1);
+    color: #ff970f;
+}
+
+/* Menu Burger (Mobile) */
+#menu-toggle {
+    display: none; /* Hanya muncul di mobile */
+}
+
+/* Hero Section */
+/* Hero Section */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Sesuaikan tinggi */
+    background: url('img/Good-Skin-Care2.jpg') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Pastikan teks ke kiri */
+    padding: 0 10%; /* Beri jarak kiri-kanan agar tidak terlalu mepet */
+    border-radius: 20px; /* Untuk sudut melengkung */
+    overflow: hidden;
+}
+
+/* Overlay untuk efek transparan */
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2); /* Efek gelap tipis */
+    z-index: 1;
+}
+
+/* Hero Content */
+.hero .hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 600px; /* Batasi lebar teks agar lebih rapi */
+    color: white;
+}
+
+.hero h1 {
+    font-size: 3.8rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* Tombol CTA */
+.btn {
+    display: inline-block;
+    background: white;
+    color: black;
+    padding: 12px 24px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #f723de;
+    color: white;
+}
+
+/* Product Section */
+.products {
+    text-align: center;
+    padding: 4rem 10%;
+}
+
+.products h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: #333; /* Warna teks */
+}
+
+/* Grid Produk */
+.product-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 kolom */
+    gap: 2rem; /* Jarak antar produk */
+    justify-content: center;
+}
+
+.product-card {
+    background: white;
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+}
+
+.product-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.product-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+}
+
+.product-card .price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.rating {
+    font-size: 1rem;
+    color: #ffb400;
+}
+
+/* Responsive Produk */
+@media (max-width: 768px) {
+    .product-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 kolom di layar kecil */
+    }
+}
+
+@media (max-width: 480px) {
+    .product-container {
+        grid-template-columns: repeat(1, 1fr); /* 1 kolom di layar HP */
+    }
+}
+
+/* Responsive Hero */
+@media (max-width: 768px) {
+    .hero {
+        height: 80vh;
+        padding: 0 5%; /* Kurangi padding di layar kecil */
+        text-align: left;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .btn {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+}
+
+
+/* Responsive Hero */
+@media (max-width: 768px) {
+    .hero {
+        height: 80vh;
+        text-align: center;
+        padding: 1rem;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+}
+
+.skincare-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 5rem auto;
+    padding: 3rem;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.skincare-content {
+    flex: 1;
+    padding-right: 2rem;
+}
+
+.skincare-content h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: #222;
+}
+
+.accordion {
+    border-top: 1px solid #ddd;
+}
+
+.accordion-item {
+    border-bottom: 1px solid #ddd;
+    padding: 1rem 0;
+}
+
+.accordion-header {
+    background: none;
+    border: none;
+    font-size: 1.3rem;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    cursor: pointer;
+    padding: 1rem 0;
+}
+
+.accordion-body {
+    display: none;
+    font-size: 1rem;
+    color: #555;
+    padding: 0.5rem 0;
+}
+
+.accordion-header span {
+    transition: transform 0.3s ease;
+}
+
+.accordion-header.active span {
+    transform: rotate(180deg);
+}
+
+.skincare-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.skincare-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+}
+
+
+/* type kulit */
+.skin-type {
+    max-width: 1200px;
+    margin: 5rem auto;
+    text-align: center;
+}
+
+.skin-type h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: #222;
+}
+
+/* kotak 1 */
+.skin-type-container {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.skin-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* kotak 2 */
+.skin-box.reverse {
+    flex-direction: row-reverse;
+}
+
+.skin-text {
+    flex: 1;
+    padding: 1.5rem;
+    text-align: left;
+}
+
+.skin-text h3 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #222;
+    margin-bottom: 1rem;
+}
+
+.skin-text p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 1.5rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    color: #fff;
+    background: #ff40af;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #ff2bb1;
+}
+
+.skin-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.skin-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+}
+
+
+.skincare-steps {
+    max-width: 1100px;
+    margin: 5rem auto;
+    text-align: center;
+}
+
+.skincare-steps h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #222;
+}
+
+.routine-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.btn {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    background: #d46aa8;
+    color: #fff;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn.active, .btn:hover {
+    background: #fb3ab4;
+}
+
+.skincare-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.skincare-item {
+    display: flex;
+    align-items: center;
+    background: #f8f8f8;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.skincare-item img {
+    width: 100px;
+    height: auto;
+    border-radius: 8px;
+    margin-right: 1.5rem;
+}
+
+.skincare-text {
+    text-align: left;
+}
+
+.skincare-text h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #222;
+}
+
+.skincare-text p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+    .skincare-item {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .skincare-item img {
+        margin: 0 auto 1rem auto;
+    }
+}
+/* Global Styles */
+.team-section {
+    text-align: center;
+    margin-top: 5rem;
+    color: #222;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* Judul */
+.team-section h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+/* Kontainer Tim */
+.team-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    flex-wrap: wrap;
+}
+
+/* Anggota Tim */
+.team-member {
+    text-align: center;
+    width: 200px; /* Pastikan ukuran konsisten */
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+/* Animasi fade-in dengan sedikit slide-up */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Tambahkan delay animasi untuk setiap anggota tim */
+.team-member:nth-child(1) { animation-delay: 0.2s; }
+.team-member:nth-child(2) { animation-delay: 0.4s; }
+.team-member:nth-child(3) { animation-delay: 0.6s; }
+
+/* Gambar Anggota Tim */
+.team-member img {
+    width: 200px;
+    height: 200px;
+    padding: 5px;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 3px solid #ff10d3;
+}
+
+/* Efek Hover: Zoom-in dan Shadow */
+.team-member img:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Nama dan Deskripsi */
+.team-member h3 {
+    font-size: 1.1rem;
+    margin-top: 0.5rem;
+    font-weight: 600;
+    color: #222;
+}
+
+.team-member p {
+    font-size: 1rem;
+    color: #555;
+    margin-top: 0.3rem;
+}
+
+
+/* Responsif */
+@media (max-width: 768px) {
+    .team-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .team-member {
+        width: 100%;
+    }
+}
+
+/* Link Instagram */
+.ig-link {
+    display: inline-block;
+    margin-top: 10px;
+    text-decoration: none;
+    font-size: 16px;
+    color: #e1306c; /* Warna khas Instagram */
+    font-weight: bold;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.ig-link i {
+    margin-right: 5px;
+}
+
+.social-media a {
+    text-decoration: none;
+    color: #ff22bd;
+    display: inline-flex;
+    align-items: center;
+}
+.social-media img {
+    width: 20px;
+    height: 20px;
+    margin-right:5px;
+}
+
+
+/* Efek hover */
+.ig-link:hover {
+    color: #c13584; /* Warna lebih gelap saat hover */
+    transform: scale(1.1);
+}
+
+
+
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 1rem 5%;
+    }
+
+    /* Sembunyikan menu di desktop */
+    .navbar-nav {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: rgba(255, 15, 239, 0.9);
+        padding: 1rem 5%;
+        text-align: center;
+        transform: translateY(-100%);
+        transition: transform 0.3s ease-in-out;
+    }
+
+    /* Tampilkan menu saat aktif */
+    .navbar-nav.active {
+        display: flex;
+        transform: translateY(0);
+    }
+
+    .navbar-nav a {
+        font-size: 1.6rem;
+        padding: 1rem 0;
+    }
+
+    /* Tampilkan tombol menu */
+    #menu-toggle {
+        display: block;
+    }
+}

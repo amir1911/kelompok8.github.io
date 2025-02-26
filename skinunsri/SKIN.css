@@ -1,0 +1,167 @@
+/* Global Styles */
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff8fc; /* Warna background lembut */
+    color: #333;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 10%;
+    background-color: #ff25a8;
+    color: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #ffddf3;
+}
+
+/* Skincare Info */
+.skincare-info {
+    text-align: left;
+    padding: 50px 10%;
+    max-width: 900px;
+    margin: auto;
+}
+
+h1 {
+    font-size: 38px;
+    font-weight: bold;
+    background-color: #ff2ca0; /* Warna pink */
+    color: white;
+    padding: 12px 25px;
+    display: inline-block;
+    border-radius: 15px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Efek hover pada h1 */
+h1:hover {
+    transform: translateY(-2px);
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
+}
+
+.skin-description {
+    max-width: 80%;
+    line-height: 1.6;
+    font-size: 16px;
+    color: #555;
+}
+
+/* Skin Tabs */
+.skin-tabs {
+    margin-top: 20px;
+}
+
+.skin-tabs span {
+    display: inline-block;
+    padding: 10px 18px;
+    background-color: #ddd;
+    margin-right: 12px;
+    border-radius: 25px;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.skin-tabs span:hover {
+    background-color: #ff11a8;
+    color: white;
+}
+
+.skin-tabs .active {
+    background-color: #f757b7;
+    color: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Product List */
+.product-list {
+    padding: 30px 10%;
+    max-width: 900px;
+    margin: auto;
+}
+
+.product {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    border-bottom: 1px solid #ddd;
+    padding: 15px 0;
+    transition: all 0.3s ease;
+}
+
+.product:hover {
+    background-color: #ffebf2;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.product img {
+    width: 80px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.product-details {
+    flex: 1;
+}
+
+.product-details span {
+    font-size: 13px;
+    color: gray;
+    display: block;
+}
+
+.product-details h3 {
+    font-size: 20px;
+    margin: 5px 0;
+    color: #444;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px;
+    }
+
+    .skincare-info,
+    .product-list {
+        padding: 30px 5%;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    .skin-tabs span {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+
+    .product {
+        flex-direction: column;
+        text-align: center;
+    }
+}
