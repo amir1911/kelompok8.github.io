@@ -13,7 +13,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 1.2rem 7%;
-    background: #fd35d2;
+    background: #ff25a8;
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     position: fixed;
     top: 0;
@@ -134,7 +134,7 @@ body {
 }
 
 .btn:hover {
-    background: #f723de;
+    background: #ff25a8;
     color: white;
 }
 
@@ -381,14 +381,14 @@ body {
     padding: 0.8rem 1.5rem;
     font-size: 1rem;
     color: #fff;
-    background: #ff40af;
+    background: #ff25a8;
     border-radius: 8px;
     text-decoration: none;
     transition: 0.3s;
 }
 
 .btn:hover {
-    background: #ff2bb1;
+    background: #ff25a8;
 }
 
 .skin-image {
