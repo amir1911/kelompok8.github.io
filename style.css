@@ -71,8 +71,8 @@ body {
 #menu-toggle {
     display: none; /* Hanya muncul di mobile */
 }
+/* end navbar */
 
-/* Hero Section */
 /* Hero Section */
 .hero {
     position: relative;
@@ -83,7 +83,6 @@ body {
     align-items: center;
     justify-content: flex-start; /* Pastikan teks ke kiri */
     padding: 0 10%; /* Beri jarak kiri-kanan agar tidak terlalu mepet */
-    border-radius: 20px; /* Untuk sudut melengkung */
     overflow: hidden;
 }
 
@@ -247,7 +246,9 @@ body {
         font-size: 1rem;
     }
 }
+/* <!-- Product Section End --> */
 
+/* <!-- START TIPS KULIT --> */
 .skincare-info {
     display: flex;
     align-items: center;
@@ -319,13 +320,29 @@ body {
     height: auto;
     border-radius: 12px;
 }
-
+/* <!-- END TIPS KULIT --> */
 
 /* type kulit */
+/* Container Utama */
 .skin-type {
     max-width: 1200px;
     margin: 5rem auto;
     text-align: center;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+/* Animasi Fade-In Up */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .skin-type h2 {
@@ -333,13 +350,48 @@ body {
     font-weight: 700;
     margin-bottom: 2rem;
     color: #222;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
 }
 
-/* kotak 1 */
+/* Animasi Fade-In untuk Judul */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Kontainer */
 .skin-type-container {
     display: flex;
     flex-direction: column;
     gap: 3rem;
+}
+
+/* Kotak Utama dengan Animasi Slide */
+@keyframes fadeSlideRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeSlideLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
 .skin-box {
@@ -350,13 +402,22 @@ body {
     padding: 2rem;
     border-radius: 12px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    animation: fadeSlideRight 0.8s ease-out forwards;
 }
 
-/* kotak 2 */
+/* Kotak dengan Tampilan Terbalik */
 .skin-box.reverse {
     flex-direction: row-reverse;
+    animation: fadeSlideLeft 0.8s ease-out forwards;
 }
 
+/* Animasi dengan Delay untuk Efek Bertahap */
+.skin-box:nth-child(1) { animation-delay: 0.2s; }
+.skin-box:nth-child(2) { animation-delay: 0.4s; }
+.skin-box:nth-child(3) { animation-delay: 0.6s; }
+
+/* Teks */
 .skin-text {
     flex: 1;
     padding: 1.5rem;
@@ -368,14 +429,19 @@ body {
     font-weight: 700;
     color: #222;
     margin-bottom: 1rem;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out 0.5s forwards;
 }
 
 .skin-text p {
     font-size: 1rem;
     color: #555;
     margin-bottom: 1.5rem;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out 0.6s forwards;
 }
 
+/* Efek Glow untuk Tombol */
 .btn {
     display: inline-block;
     padding: 0.8rem 1.5rem;
@@ -385,29 +451,84 @@ body {
     border-radius: 8px;
     text-decoration: none;
     transition: 0.3s;
+    position: relative;
+    overflow: hidden;
 }
 
+/* Efek Hover dengan Glow */
 .btn:hover {
     background: #ff25a8;
+    box-shadow: 0 0 15px rgba(255, 37, 168, 0.6);
 }
 
+/* Gambar */
 .skin-image {
     flex: 1;
     display: flex;
     justify-content: center;
 }
 
+/* Efek Hover pada Gambar */
 .skin-image img {
     max-width: 100%;
     height: auto;
     border-radius: 12px;
+    transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
 }
 
+.skin-image img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
 
+/* Responsif */
+@media (max-width: 768px) {
+    .skin-box {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .skin-box.reverse {
+        flex-direction: column;
+    }
+
+    .skin-image img {
+        margin-top: 1rem;
+    }
+}
+
+/* <!-- end type kulit --> */
+
+
+/* <!-- start step by step skincare --> */
+/* Reset dan Font */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #fdfdfd;
+}
+
+/* Container Utama */
 .skincare-steps {
     max-width: 1100px;
     margin: 5rem auto;
     text-align: center;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeSlideDown 0.8s ease-out forwards;
+}
+
+/* Animasi Fade-In + Slide Down */
+@keyframes fadeSlideDown {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .skincare-steps h2 {
@@ -415,13 +536,40 @@ body {
     font-weight: 700;
     margin-bottom: 1rem;
     color: #222;
+    opacity: 0;
+    animation: fadeInText 1s ease-in-out forwards;
 }
 
+/* Animasi Fade-In untuk Judul */
+@keyframes fadeInText {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Tombol */
 .routine-buttons {
     display: flex;
     justify-content: center;
     gap: 1rem;
     margin-bottom: 2rem;
+    opacity: 0;
+    animation: fadeSlideUp 0.5s ease-out 0.3s forwards;
+}
+
+/* Animasi Tombol */
+@keyframes fadeSlideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .btn {
@@ -433,18 +581,45 @@ body {
     border: none;
     cursor: pointer;
     transition: 0.3s;
+    transform: scale(1);
 }
 
+/* Efek Pulse saat Hover */
 .btn.active, .btn:hover {
     background: #fb3ab4;
+    animation: pulse 0.6s infinite alternate;
 }
 
+/* Animasi Pulse */
+@keyframes pulse {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.1);
+    }
+}
+
+/* List Skincare */
 .skincare-list {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
 }
 
+/* Animasi Fade-In + Slide dari Kiri */
+@keyframes fadeSlideLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Item Skincare */
 .skincare-item {
     display: flex;
     align-items: center;
@@ -452,15 +627,31 @@ body {
     padding: 1.5rem;
     border-radius: 12px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    animation: fadeSlideLeft 0.8s ease-out forwards;
 }
 
+/* Delay Animasi untuk Efek Bertahap */
+.skincare-item:nth-child(1) { animation-delay: 0.2s; }
+.skincare-item:nth-child(2) { animation-delay: 0.4s; }
+.skincare-item:nth-child(3) { animation-delay: 0.6s; }
+.skincare-item:nth-child(4) { animation-delay: 0.8s; }
+
+/* Gambar */
 .skincare-item img {
     width: 100px;
     height: auto;
     border-radius: 8px;
     margin-right: 1.5rem;
+    transition: transform 0.4s ease-in-out;
 }
 
+/* Efek Hover dengan Tilt */
+.skincare-item:hover img {
+    transform: rotate(-5deg) scale(1.1);
+}
+
+/* Teks */
 .skincare-text {
     text-align: left;
 }
@@ -487,7 +678,11 @@ body {
         margin: 0 auto 1rem auto;
     }
 }
-/* Global Styles */
+
+
+/* <!-- end step by step skincare --> */
+
+/* <!-- start the team --> */
 .team-section {
     text-align: center;
     margin-top: 5rem;
