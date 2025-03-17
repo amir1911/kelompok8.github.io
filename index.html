@@ -8,42 +8,101 @@
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200..800&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/feather-icons"></script>
     <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+
     <title>Luminous.co</title>
 </head>
 <body>
 
-    <!-- Navbar Start -->
-    <nav class="navbar" >
-        <a href="#" class="navbar-logo">Luminous.co</a>
-
-        <div class="navbar-nav" id="hamburger-menu">
-            <a href="#home">Home</a>
-            <a href="#skincarestage">Skincare Stages</a>
-            <a href="#recomendation">Recommendation</a>
-            <a href="#aboutus">About us</a>
+ <!-- Navbar Start -->
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color:#ff25a8;">
+    <div class="container-fluid">
+        <a href="#" class="navbar-brand"  style="color: white;">Luminous.co</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#recomendation" class="nav-link">Recommendation</a>
+                <li class="nav-item">
+                    <a href="#skincarestage" class="nav-link">Skincare Stages</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#aboutus" class="nav-link">About us</a>
+                </li>
+            </ul>
+            <div class="d-flex">
+                <a href="#" id="menu-toggle"><i data-feather="menu"></i></a>
+            </div>
         </div>
-
-        <div class="navbar-extra">
-            <a href="#" id="search"><i data-feather="search"></i></a>
-            <a href="#" id="menu-toggle"><i data-feather="menu"></i></a>
-        </div>
-    </nav>
-    <!-- Navbar End -->
-
-    <!-- start hero section -->
-    <!-- Hero Section Start -->
-<section class="hero" id="home">
-    <div class="hero-content">
-        <h1>Glow with Confidence – <br> Skincare Designed for You</h1>
-        <p>
-            Temukan perawatan kulit yang memahami kebutuhan Anda. Formula kami 
-            dirancang dengan cermat untuk menutrisi, melindungi, dan meningkatkan 
-            kecantikan alami Anda—karena kulit Anda layak mendapatkan yang terbaik.
-        </p>
-        <a href="#" class="btn" >Shop now</a>
     </div>
-</section>
-<!-- Hero Section End -->
+</nav>
+<!-- Navbar End -->
+
+<main>
+
+<!-- Carousel Start -->
+<div id="myCarousel" class="carousel slide mb-6" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+        <div class="carousel-item active slide-1">
+            <div class="container">
+                <div class="carousel-caption text-start">
+                    <h1 style="text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8)">Glow with Confidence –
+                        Skincare Designed for You</h1>
+                    <p style="text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8)">Temukan perawatan kulit yang memahami kebutuhan Anda. 
+                        Formula kami dirancang dengan cermat untuk menutrisi, melindungi, dan meningkatkan kecantikan alami Anda—
+                        karena kulit Anda layak mendapatkan yang terbaik..</p>
+                    <p><a class="btn" style="background-color: #ff25a8; color: white;" href="#">Get Started</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-item slide-2">
+            <div class="container">
+                <div class="carousel-caption">
+                    <h1 style="text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8)">Glow with Confidence –
+                        Skincare Designed for You</h1>
+                        <p style="text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8)">Temukan perawatan kulit yang memahami kebutuhan Anda. 
+                            Formula kami dirancang dengan cermat untuk menutrisi, melindungi, dan meningkatkan kecantikan alami Anda—
+                            karena kulit Anda layak mendapatkan yang terbaik..</p>
+                            <p><a class="btn" style="background-color: #ff25a8; color: white;" href="#">Get Started</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-item slide-3">
+            <div class="container">
+                <div class="carousel-caption text-end">
+                    <h1 style="text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8)">Glow with Confidence –
+                        Skincare Designed for You</h1>
+                    <p style="text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8)">Temukan perawatan kulit yang memahami kebutuhan Anda. 
+                        Formula kami dirancang dengan cermat untuk menutrisi, melindungi, dan meningkatkan kecantikan alami Anda—
+                        karena kulit Anda layak mendapatkan yang terbaik..</p>
+                        <p><a class="btn" style="background-color: #ff25a8; color: white;" href="#">Get Started</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+<!-- Carousel End -->
+
 
 <!-- Product Section Start -->
 <section class="products">
@@ -105,7 +164,6 @@
 </section>
 <!-- END TIPS KULIT -->
 
-/* type kulit */
 <section class="skin-type" id="recomendation" >
     <h2>Know How To Glow Based From <br> Your Skin Type</h2>
 
@@ -115,7 +173,7 @@
                 <h3>Normal Skin</h3>
                 <p>Normal skin is well-balanced, neither too oily nor too dry, with small, barely visible pores, 
                     a smooth texture, and minimal imperfections.</p>
-                    <a href="skincare-stages.html" class="btn">Check Your Skincare Stages</a>
+                    <a href="skincare-stages.html" class="btn" style="background-color: #ff25a8; color: white;">Check Your Skincare Stages</a>
             </div>
             <div class="skin-image">
                 <img src="img/Rectangle 16.png" alt="Normal Skin">
@@ -130,7 +188,7 @@
                 <h3>Oily Skin</h3>
                 <p>Oily skin produces excess sebum, giving it a shiny appearance and making it prone to acne, 
                     blackheads, and enlarged pores. It requires oil-controlling products to maintain a healthy look.</p>
-                    <a href="oilyskin.html" class="btn">Check Your Skincare Stages</a>
+                    <a href="oilyskin.html" class="btn" style="background-color: #ff25a8; color: white;">Check Your Skincare Stages</a>
             </div>
         </div>
     </div>
@@ -143,9 +201,9 @@
         <div class="skin-box">
             <div class="skin-text">
                 <h3>Sensitive</h3>
-                <p>For those with sensitive skin, irritation is a common issue, leading to redness, itching, and discomfort when exposed to harsh skincare products or environmental factors. This skin type 
-                    benefits from gentle, fragrance-free, and hypoallergenic formulas.</p>
-                    <a href="sensitive.html" class="btn">Check Your Skincare Stages</a>
+                <p>For those with sensitive skin, irritation is a common issue, leading to redness, itching, and discomfort when exposed to harsh skincare products or environmental factors. 
+                    This skin type  benefits from gentle, fragrance-free, and hypoallergenic formulas.</p>
+                    <a href="sensitive.html" class="btn" style="background-color: #ff25a8; color: white;">Check Your Skincare Stages</a>
             </div>
             <div class="skin-image">
                 <img src="img/Rectangle 20.png" alt="Normal Skin">
@@ -160,66 +218,21 @@
                 <h3>Combination Skin</h3>
                 <p>Combination skin is a mix of different skin types, typically having an oily T-zone (forehead, nose, and chin)
                      while the cheeks remain dry, requiring a balanced skincare approach.</p>
-                    <a href="combinetion.html" class="btn">Check Your Skincare Stages</a>
+                    <a href="combinetion.html" class="btn" style="background-color: #ff25a8; color: white;">Check Your Skincare Stages</a>
             </div>
         </div>
     </div>
 </section>
-<!-- end type kulit -->
 
-<!-- start step by step skincare -->
 <div class="skincare-steps" id="skincarestage">
     <h2>Skincare Step by Step</h2>
-    <div class="routine-buttons">
-        <button class="btn ">Morning Skincare</button>
-        <button class="btn">Night Skincare</button>
-    </div>
+    <a href="morning.html" class="btn" style="background-color: #ff25a8; color: white;">Morning Skincare</a>
+    <a href="night.html" class="btn" style="background-color: #ff25a8; color: white;">Night Skincare</a>
     
-    <div class="skincare-list">
-        <div class="skincare-item">
-            <img src="img/image22.png" alt="Face Wash">
-            <div class="skincare-text">
-                <h3>Face Wash</h3>
-                <p>Removes dirt, oil, and impurities to keep the skin fresh and clean. Use a gentle cleanser suited to your skin type for the best results.</p>
-            </div>
-        </div>
-
-        <div class="skincare-item">
-            <img src="img/image23.png" alt="Toner">
-            <div class="skincare-text">
-                <h3>Toner</h3>
-                <p>Restores the skin’s pH balance and preps it for better absorption of skincare products.</p>
-            </div>
-        </div>
-
-        <div class="skincare-item">
-            <img src="img/image24.png" alt="Serum">
-            <div class="skincare-text">
-                <h3>Serum</h3>
-                <p>Delivers concentrated active ingredients to target specific skin concerns like hydration, brightening, or anti-aging.</p>
-            </div>
-        </div>
-
-        <div class="skincare-item">
-            <img src="img/image25.png" alt="Moisturizer">
-            <div class="skincare-text">
-                <h3>Moisturizer</h3>
-                <p>Keeps the skin hydrated and strengthens its protective barrier.</p>
-            </div>
-        </div>
-
-        <div class="skincare-item">
-            <img src="img/image27.png" alt="Sunscreen">
-            <div class="skincare-text">
-                <h3>Sunscreen</h3>
-                <p>Protects the skin from UV rays, preventing premature aging and sun damage.</p>
-            </div>
-        </div>
-    </div>
+    
+   
+   
 </div>
-/* <!-- end step by step skincare --> */
-
-<!-- start the team -->
 <div class="team-section" id="aboutus">
     <h2>The Team</h2>
     <div class="team-container">
@@ -246,7 +259,6 @@
                 </a>
    </div>
         </div>
-
         <div class="team-member">
             <img src="img/tasha.jpg" alt="Team Member 3">
             <h3>Tasya Anggraini</h3>
@@ -258,7 +270,6 @@
                 </a>
             </div>
         </div>
-
         <div class="team-member">
             <img src="img/iqbal.jpg" alt="Team Member 4">
             <h3>M.Iqbal Meidiansyah</h3>
