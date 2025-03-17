@@ -11,38 +11,48 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+   
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
     <title>Luminous.co</title>
 </head>
 <body>
 
  <!-- Navbar Start -->
-<nav class="navbar navbar-expand-lg navbar-light" style="background-color:#ff25a8;">
+ <nav class="navbar navbar-expand-lg navbar-light" style="background-color:#ff25a8;">
     <div class="container-fluid">
-        <a href="#" class="navbar-brand"  style="color: white;">Luminous.co</a>
+        <a href="#" class="navbar-brand" style="color: white;">Luminous.co</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
+        
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
-                    <a href="#home" class="nav-link">Home</a>
+                    <a href="#home" class="nav-link text-white">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#recomendation" class="nav-link">Recommendation</a>
-                <li class="nav-item">
-                    <a href="#skincarestage" class="nav-link">Skincare Stages</a>
+                    <a href="#recommendation" class="nav-link text-white">Recommendation</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#aboutus" class="nav-link">About us</a>
+                    <a href="#skincarestage" class="nav-link text-white">Skincare Stages</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#aboutus" class="nav-link text-white">About Us</a>
                 </li>
             </ul>
-            <div class="d-flex">
-                <a href="#" id="menu-toggle"><i data-feather="menu"></i></a>
-            </div>
+            
+            <!-- Search Bar -->
+            <form id="searchForm" class="d-flex" action="" method="GET">
+                <input class="form-control me-2" type="search" id="searchInput" name="search" placeholder="Cari produk..." aria-label="Search">
+                <button class="btn btn-outline-light" type="submit">Cari</button>
+            </form>
+            
         </div>
     </div>
 </nav>
+
 <!-- Navbar End -->
 
 <main>
@@ -108,32 +118,40 @@
 <section class="products">
     <h2>Glow With These</h2>
     <div class="product-container">
+
         <!-- Produk 1 -->
         <div class="product-card">
-            <img src="img/image.png" alt="Skintific - Matte Cushion">
-            <h3>Skintific - Matte Cushion</h3>
-            <p class="price">Rp 122.000</p>
-            <div class="rating">⭐⭐⭐⭐⭐ <span>112 Ulasan</span></div>
+            <iframe width="300" height="200" src="https://www.youtube.com/embed/WwxoWrHymeY" frameborder="0" allowfullscreen></iframe>
+            <h3>Kenali Skin Type-mu! Perbedaan Kulit Kombinasi, Berminyak, dan Kering ✨</h3>
+           
+            <p style="text-align: justify; color: black; background: #f9f9f9; padding: 10px; border-radius: 5px; line-height: 1.6;">Pernah bingung sebenarnya jenis kulitmu itu apa? Apakah berminyak, kering, atau kombinasi? 
+                ✨ Apa yang akan kamu pelajari?
+                - Perbedaan kulit kombinasi, berminyak, dan kering
+                - Cara mudah mengetahui jenis kulitmu
+                - Produk skincare yang cocok untuk setiap skin type
+                - Kesalahan umum dalam merawat kulit
+            </p>
         </div>
         
         <!-- Produk 2 -->
         <div class="product-card">
-            <img src="img/image1.png" alt="Skintific - Barrier Moisture Gel">
-            <h3>Skintific - Barrier Moisture Gel</h3>
-            <p class="price">Rp 67.000</p>
-            <div class="rating">⭐⭐⭐⭐⭐ <span>112 Ulasan</span></div>
+            <iframe width="300" height="200" src="https://www.youtube.com/embed/c3HFwOH37NU" frameborder="0" allowfullscreen></iframe>
+            <h3>Baru Pakai Skincare? Ini Panduan Lengkap Skincare untuk Pemula!</h3>
+            <p style="text-align: justify; color: black; background: #f9f9f9; padding: 10px; border-radius: 5px; line-height: 1.6;">Baru mulai pakai skincare dan bingung harus mulai dari mana? Tenang, di video ini kita akan bahas panduan skincare untuk pemula!</p>
         </div>
 
         <!-- Produk 3 -->
         <div class="product-card">
-            <img src="img/image2.png" alt="Skintific - Peeling Acid">
-            <h3>Skintific - Peeling Acid</h3>
-            <p class="price">Rp 42.000</p>
-            <div class="rating">⭐⭐⭐⭐⭐ <span>112 Ulasan</span></div>
+            <iframe width="300" height="200" src="https://www.youtube.com/embed/2CpCyNPqhg4" frameborder="0" allowfullscreen></iframe>
+            <h3>Urutan Skincare Pagi & Malam yang Benar! Biar Kulit Glowing Maksimal ✨</h3>
+            
+            <p style="text-align: justify; color: black; background: #f9f9f9; padding: 10px; border-radius: 5px; line-height: 1.6;">Masih bingung urutan skincare yang benar? Jangan sampai salah langkah, ya! Urutan skincare yang tepat bisa bikin kulit lebih sehat, glowing, dan bebas masalah.</p>
+           
         </div>
+
     </div>
 </section>
-<!-- Product Section End -->
+
 
 <!-- START TIPS KULIT -->
 <section class="skincare-info">
@@ -241,9 +259,8 @@
             <h3>Sintia Adely Putri</h3>
             <p>09031282429044</p>
             <div class="social-media">
-                <a href="https://www.instagram.com/sintiadely_?igsh=MTN1a3dicWY0czd5aw==" target="_blank">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
-                    Instagram
+                <a href="https://www.instagram.com/sintiadely_?igsh=MTN1a3dicWY0czd5aw==" target="_blank" class="instagram-link">
+                    <i class="fa-brands fa-instagram"></i> Instagram
                 </a>
     </div>
         </div>
@@ -253,9 +270,8 @@
             <h3>Amirullah</h3>
             <p>09031182429023</p>
             <div class="social-media">
-                <a href="https://www.instagram.com/amirrrrrr_1?igsh=MWV1dzMzczlxY2U1Yg==" target="_blank">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
-                    Instagram
+                <a href="https://www.instagram.com/amirrrrrr_1?igsh=MWV1dzMzczlxY2U1Yg==" target="_blank" class="instagram-link">
+                    <i class="fa-brands fa-instagram"></i> Instagram
                 </a>
    </div>
         </div>
@@ -264,9 +280,8 @@
             <h3>Tasya Anggraini</h3>
             <p>09031182429005</p>
             <div class="social-media">
-                <a href="https://www.instagram.com/tsyaa.agrr?igsh=a2VkbDU0YXFsMTE5" target="_blank">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
-                    Instagram
+                <a href="https://www.instagram.com/tsyaa.agrr?igsh=a2VkbDU0YXFsMTE5" target="_blank" class="instagram-link">
+                    <i class="fa-brands fa-instagram"></i> Instagram
                 </a>
             </div>
         </div>
@@ -275,15 +290,14 @@
             <h3>M.Iqbal Meidiansyah</h3>
             <p>09031282429059</p>
             <div class="social-media">
-                <a href="https://www.instagram.com/iqbal_meidiansyah?igsh=dzY1NGZlNzl5Y2xn" target="_blank">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
-                    Instagram
+                <a href="https://www.instagram.com/iqbal_meidiansyah" target="_blank" class="instagram-link">
+                    <i class="fa-brands fa-instagram"></i> Instagram
                 </a>
+                
             </div>
         </div>
     </div>
 </div>
-
 
 
 
@@ -308,6 +322,37 @@
     });
 </script>
 
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function () {
+        // Ambil parameter dari URL jika ada
+        const urlParams = new URLSearchParams(window.location.search);
+        const searchQuery = urlParams.get('search');
+
+        if (searchQuery) {
+            $("#searchInput").val(searchQuery);
+
+            $(".product-card").each(function () {
+                let productName = $(this).data("name").toLowerCase();
+                if (productName.includes(searchQuery.toLowerCase())) {
+                    $(this).show();
+                } else {
+                    $(this).hide();
+                }
+            });
+        }
+
+        // Event saat form pencarian dikirim
+        $("#searchForm").submit(function (event) {
+            event.preventDefault();
+            let searchText = $("#searchInput").val().toLowerCase();
+            window.location.href = window.location.pathname + "?search=" + encodeURIComponent(searchText);
+        });
+    });
+</script>
+<script src="script.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 </body>
+
 </html>

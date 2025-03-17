@@ -8,30 +8,30 @@ body {
 }
 
 /* Header */
-header {
+/* Styling Navbar */
+/* Styling Navbar */
+.navbar {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 15px 10%;
-    background-color: #ff25a8;
-    color: white;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+    padding: 10px 20px;
+    background-color: #ff25a8; /* Warna Navbar */
 }
 
-nav a {
+/* Styling Tombol Kembali */
+.back-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
     color: white;
-    text-decoration: none;
-    margin: 0 15px;
-    font-weight: 500;
-    transition: color 0.3s ease;
+    transition: transform 0.2s ease-in-out;
 }
 
-nav a:hover {
-    color: #ffddf3;
+/* Hover Effect */
+.back-btn:hover {
+    transform: scale(1.2);
 }
+
 
 /* Skincare Info */
 .skincare-info {
@@ -169,3 +169,5 @@ h1:hover {
         text-align: center;
     }
 }
+
+

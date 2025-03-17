@@ -19,4 +19,40 @@ menuToggle.addEventListener("click", function (e) {
     feather.replace();
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+    const buttons = document.querySelectorAll(".toggle-btn");
+
+    buttons.forEach(button => {
+        button.addEventListener("click", function () {
+            const description = this.previousElementSibling; // Ambil elemen <p> sebelumnya
+            description.classList.toggle("show");
+
+            // Ubah teks tombol sesuai kondisi
+            if (description.classList.contains("show")) {
+                this.textContent = "Sembunyikan Deskripsi";
+            } else {
+                this.textContent = "Tampilkan Deskripsi";
+            }
+        });
+    });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    const buttons = document.querySelectorAll(".toggle-btn");
+
+    buttons.forEach(button => {
+        button.addEventListener("click", function () {
+            const description = this.nextElementSibling;
+            if (description.style.display === "none" || description.style.display === "") {
+                description.style.display = "block";
+                this.textContent = "Sembunyikan Deskripsi";
+            } else {
+                description.style.display = "none";
+                this.textContent = "Tampilkan Deskripsi";
+            }
+        });
+    });
+});
+
+
 
