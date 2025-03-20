@@ -37,22 +37,5 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-document.addEventListener("DOMContentLoaded", function () {
-    const buttons = document.querySelectorAll(".toggle-btn");
-
-    buttons.forEach(button => {
-        button.addEventListener("click", function () {
-            const description = this.nextElementSibling;
-            if (description.style.display === "none" || description.style.display === "") {
-                description.style.display = "block";
-                this.textContent = "Sembunyikan Deskripsi";
-            } else {
-                description.style.display = "none";
-                this.textContent = "Tampilkan Deskripsi";
-            }
-        });
-    });
-});
-
 
 
